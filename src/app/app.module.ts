@@ -4,22 +4,24 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
+import { TasksModule } from './tasks/tasks.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     LayoutModule,
+    TasksModule,
     // MUST BE LAST
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 

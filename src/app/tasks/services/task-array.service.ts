@@ -5,13 +5,13 @@ import { TaskModel } from './../models/task.model';
 const taskList = [
   new TaskModel(1, 'Estimate', 1, 8, 8, true),
   new TaskModel(2, 'Create', 2, 8, 4, false),
-  new TaskModel(3, 'Deploy', 3, 8, 0, false)
+  new TaskModel(3, 'Deploy', 3, 8, 0, false),
 ];
 
 const taskListPromise: Promise<TaskModel[]> = Promise.resolve(taskList);
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TaskArrayService {
   getTasks(): Promise<TaskModel[]> {

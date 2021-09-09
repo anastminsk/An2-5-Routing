@@ -5,7 +5,7 @@ export class TaskModel {
     public priority: number = 0,
     public estHours: number = 0,
     public actHours?: number,
-    public done?: boolean,
+    public done?: boolean
   ) {
     this.actHours = actHours || 0;
     this.done = done || false;

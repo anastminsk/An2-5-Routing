@@ -23,7 +23,17 @@
         </nav>
 
         <div class="container">
-          <router-outlet></router-outlet>
+          <div class="col-md-10">
+            <router-outlet></router-outlet>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-success"
+                *ngIf="!messagesService.isDisplayed"
+                (click)="onDisplayMessages()">
+              Show Messages
+            </button>
+            <router-outlet name="messages"></router-outlet>
+          </div>
         </div>
     </div>
 </div>
